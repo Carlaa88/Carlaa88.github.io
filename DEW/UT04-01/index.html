@@ -1,19 +1,98 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-  <meta charset = "UTF-8">
-  <meta name ="viewport" content = "width=inp, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <title>Formulario</title>
 </head>
 <body>
-  <form action = "https://www.w3schools.com/action_page.php">
-    <label>Teléfono</label><hr><input type = "tel" name = "telefono" id=""><br>
-    <label>Numero</label><hr><input type = "number" name = "numeros" id = "" ><br>
-    <label>Email</label><hr><input type = "email" name = "email" id = "" ><br>
-    <label>Texto</label><hr><input type = "text" name = "texto" id = "" ><br>
-    <label>Contraseña</label><hr><input type = "password" name = "password" id = "" ><br>
-    <label>Buscar</label><hr><input type = "search" name = "search" id = ""> <br>
-    <label>Url</label><hr><input type = "url" name = "url" id = "" ><br>
-    <input type = "submit" value = "Enviar a w3school a ver que me dice">
+  <form  method = "post" action="https://www.w3schools.com/action_page.php">
+    <fieldset class="datosUsuario">
+      <legend>Datos Usuario</legend>
+      <div class="nombreUsuario">
+        <label for="nombreUsuario">Nombre de Usuario</label><br>
+        <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre Usuario" required>
+      </div>
+      <div class="contrasena">
+        <label for="contrasena">Contraseña</label><br>
+        <input type="password" name="contraseña" id="contrasena" placeholder="Introduce Contraseña" required><br>
+        <input type="checkbox" name="mostrarContrasena" id="mostrarContrasena"><label for="mostrarContrasena">Mostrar Contraseña</label>
+      </div>
+    </fieldset>
+    <fieldset class="datosPersonales">
+      <legend>Datos Personales</legend>
+      <div class="nombre">
+        <label for="nombre">Nombre</label><br>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+      </div>
+      <div class="apellido">
+        <label for="apellido">Apellidos</label><br>
+        <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required>
+      </div>
+      <div class="telefono">
+        <label for="telefono">Teléfono</label><br>
+        <input type="tel" name="telefono" id="telefono" placeholder="Ejem:(+34)922123123" required>
+      </div>
+      <div class="codigoPostal">
+        <label for="codigoPostal">Código Postal</label><br>
+        <input type="text" name="codigoPostal" id="codigoPostal" placeholder="38XXX" required>
+      </div>
+      <div class="dni">
+        <label for="dni">DNI/NIE</label><br>
+        <select id="dni" name="DNI/NIE" required>
+          <option value="" disabled selected>---</option>
+          <option value="DNI">DNI</option>
+          <option value="NIE">NIE</option>
+        </select>
+        <input type="text" name="opcionDNI" id="opcionDNI" placeholder="DNI/NIE" required><br>
+      </div>
+      <div class="cuenta">
+        <label>Crear cuenta como:</label><br>
+        <input type="radio" id="particular" name="cuenta" value="Particular" required><label for="particular">Particular</label>
+        <input type="radio" id="empresa" name="cuenta" value="Empresa" required><label for="empresa">Empresa</label>
+      </div>
+      <div class="anoNacimiento">
+        <label for="anoNacimiento">Año de Nacimiento</label><br>
+        <select id="anoNacimiento" name="anoNacimiento" required>
+          <option value="2010">2010</option>
+          <option value="2011">2011</option>
+          <option value="2012">2012</option>
+        </select>
+      </div>
+      <div class="aficiones">
+        <label>Elige tus aficiones:</label><br> 
+        <div class="aficiones-grid">
+          <div>
+            <input type="checkbox" name="musica" id="musica" value="musica"><label for="musica">Música</label><br>
+            <input type="checkbox" name="manualidades" id="manualidades" value="manualidades"><label for="manualidades">Manualidades</label>
+          </div>
+          <div>
+            <input type="checkbox" name="deporte" id="deporte" value="deporte"><label for="deporte">Deporte</label><br>
+            <input type="checkbox" name="artes" id="artes" value ="artes"><label for="artes">Artes</label>
+          </div>
+          <div>
+            <input type="checkbox" name="videoJuego" id="videoJuego" value="videoJuego"><label for="videoJuego">Video Juegos</label><br>
+            <input type="checkbox" name="lectura" id="lectura" value ="lectura"><label for="lectura">Lectura</label>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="datosPublicacion">
+      <legend>Datos Publicación</legend>
+      <div>
+        <label for="titulo" id = "titulo">Título</label><br>
+        <input type="text" name="titulo" id="titulo" placeholder="Título" required>
+        <span class="char-counter" id="counter-title">0/5</span>
+      </div>
+      <div>
+        <label for="descripcion">Descripción</label><br>
+        <textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea><br>
+        <span class="char-counter" id="counter-description">0/15</span>
+      </div>
+    </fieldset>
+    <input type = "submit" value = "Enviar a w3school">
   </form>
+  <script src="script.js"></script>
+</body>
 </html>
