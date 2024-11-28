@@ -1,0 +1,89 @@
+fieldset{
+    display: grid;
+}
+
+.datosUsuario {
+    grid-template-columns: 1fr 1fr; 
+    gap: 10em;
+}
+
+.datosPersonales {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1em; 
+}
+
+.nombre {
+    grid-column: 1; 
+}
+
+.apellido {
+    grid-column: 2; 
+}
+
+.telefono {
+    grid-column: 1; 
+}
+
+.codigoPostal {
+    grid-column: 2; 
+}
+
+.dni {
+    grid-column: 1; 
+}
+
+.cuenta {
+    grid-column: 2; 
+}
+
+.anoNacimiento {
+    grid-column: 3; 
+}
+
+/*Aficiones*/
+.aficiones-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.aficiones label {
+    margin-left: 5px;
+}
+
+.aficiones div {
+    width: 10em;
+}
+
+#titulo, #descripcion {
+    width: 100%;
+} 
+
+
+/*Validar*/
+
+input:valid {
+    border: 0.1em solid green;
+    background-color: lightgreen;
+}
+
+input:invalid {
+    border: 0.1em solid red;
+    background-color: rgb(251, 202, 202);
+}
+
+
+/*Contador*/
+.char-counter {
+    font-size: 0.6em;
+    color: #666;
+    position: absolute;
+    right: 2em;
+    bottom: -1.2em;
+}
+  
+div {
+    position: relative;
+}
+  
