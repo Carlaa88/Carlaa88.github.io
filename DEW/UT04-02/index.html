@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Formulario</title>
+</head>
+<body>
+  <div class ="contenedor1">
+    <form  id = "form" action="https://www.w3schools.com/action_page.php" novalidate >
+      <fieldset class="datosUsuario">
+        <legend>Datos Usuario</legend>
+        <div class="nombreUsuario">
+          <label for="nombreUsuario">Nombre de Usuario</label>
+          <input type="text" name="NombreUsuario" id="nombreUsuario" placeholder="Nombre Usuario" minlength="4" maxlength="20" required >
+          <span id="error-nombreUsuario" class="error">Introduzca mínimo 4 caracteres</span>
+        </div>
+        <div class="contrasena">
+          <label for="contrasena">Contraseña</label>
+          <input type="password" name="Contrasena" id="contrasena" placeholder="Introduce Contraseña" required    pattern="\d{8}">
+          <span id="error-contrasena" class="error">Introduzca 8 números para la contraseña</span>
+          <label for="mostrarContrasena"><input type="checkbox" name="mostrarContrasena" id="mostrarContrasena">Mostrar Contraseña</label>
+        </div>
+      </fieldset>
+      <fieldset class="datosPersonales">
+        <legend>Datos Personales</legend>
+        <div class ="nombreYtelefono">
+          <div class="nombre">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="Nombre" id="nombre" placeholder="Nombre" minlength="4" maxlength="20" required>
+            <span id="error-nombre" class="error">Introduzca mínimo 4 caracteres</span>
+          </div>
+          <div class="telefono">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" name="Telefono" id="telefono" placeholder="Ejemplo:(+34)922123123" pattern="^\+34\s?\d{9}$" required >
+            <span id="error-telefono" class="error">Introduzca su teléfono comenzando por (+34)</span>
+          </div>
+        </div>
+        <div class = "apellidoYcodigopostal">
+          <div class="apellidos">
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="Apellidos" id="apellidos" placeholder="Apellidos" minlength="4" maxlength="20" required>
+            <span id="error-apellidos" class="error">Introduzca mínimo 4 caracteres</span>
+          </div>
+          <div class="codigoPostal">
+            <label for="codigoPostal">Código Postal</label>
+            <input type="text" name="CodigoPostal" id="codigoPostal" placeholder="38XXX" pattern="^38\d{3}$" required >
+            <span id="error-codigoPostal" class="error">Introduzca su código comenzando por ' 38 '</span>
+          </div>
+        </div>
+        <div class = "tipoDocumentoCuentaAnio">
+          <div class="tipoDocumento">
+            <label for="tipoDocumento">DNI/NIE</label>
+            <div class = "dni-contenedor">
+              <select id="tipoDocumento" name="TipoDocumento" required>
+                <option value="DNI" pattern = "^\d{8}[A-Za-z]$">DNI</option>
+                <option value="NIE" pattern = "^[XYZ]\d{7}[A-Za-z]$" >NIE</option>
+              </select>
+              <input type="text" name="DniNie" id="DniNie" placeholder="DNI/NIE" required>
+            </div>
+            <span id="error-dni" class="error">Introduzca un número de identidad válido</span>
+          </div>
+          <div class="cuentaComo">
+            <label>Crear cuenta como:</label>
+              <div class = "particularempresa">
+                <label for="CuentaComo"><input type="radio" id="CuentaComo" name="CuentaComo" value="Particular">Particular</label>
+                <label for="CuentaComo"><input type="radio" id="CuentaComo" name="CuentaComo" value="Empresa">Empresa</label>
+              </div>
+            <span id="error-cuentacomo" class="error">Seleccione una opción</span>
+          </div>
+          <div class="AnioNacimiento">
+            <label for="AnioNacimiento">Año de Nacimiento</label>
+            <select id="AnioNacimiento" name="AnioNacimiento">
+              <option value = "1920" >1920</option>
+            </select>
+          </div>
+        </div>
+       
+        <div class="aficiones">
+          <label>Elige tus aficiones:</label>
+          <div class="aficiones-flex">
+              <div>
+                  <label for="musica"><input type="checkbox" class="aficion" id="musica" value="MU">Música</label>
+                  <label for="manualidades"><input type="checkbox" class="aficion"  id="manualidades" value="MA">Manualidades</label>
+              </div>
+              <div>
+                  <label for="deporte"><input type="checkbox" class="aficion"   id="deporte" value="DE">Deporte</label>
+                  <label for="artes"><input type="checkbox" class="aficion"  id="artes" value="AR">Artes</label>
+              </div>
+              <div>
+                  <label for="videoJuego"><input type="checkbox" class="aficion"  id="videoJuego" value="VI">Video Juegos</label>
+                  <label for="lectura"><input type="checkbox" class="aficion"   id="lectura" value="LE">Lectura</label>
+              </div>
+          </div>
+          <span id="aficiones-error" class="error">Selecciona al menos dos opciones</span>
+          <input type="hidden" name="Aficiones" id="aficiones-hidden">
+      </div>
+      
+      
+      </fieldset>
+      <fieldset class="datosPublicacion">
+        <legend>Datos Publicación</legend>
+        <div>
+            <label for="PublicacionTitulo" id="PublicacionTituloLabel">Título</label>
+            <input type="text" name="PublicacionTitulo" id="PublicacionTitulo" placeholder="Título" minlength="4" maxlength="15" required>
+            <span id="error-titulo" class="error">Introduzca mínimo 4 caracteres</span>
+            <span class="contador" id="contador-titulo">0/15</span>
+        </div>
+        <div>
+            <label for="PublicacionDescripcion">Descripción</label>
+            <textarea name="PublicacionDescripcion" id="PublicacionDescripcion" cols="30" rows="10" minlength="4" maxlength="120" required></textarea>
+            <span id="error-descripcion" class="error">Introduzca mínimo 4 caracteres</span>
+            <span class="contador" id="contador-descripcion">0/120</span>
+        </div>
+      </fieldset>
+      <button type = "submit" >Enviar</button>
+    </form>
+  </div>
+  <div class ="contenedor2"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
