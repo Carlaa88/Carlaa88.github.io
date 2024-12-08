@@ -1,0 +1,332 @@
+
+/*MODO DIURNO*/
+
+.colores  {color : #204265,  #ffffff, #40770c, #aaff7f}
+
+.modo-diurno
+{
+    --letra-general: #ffffff;
+    --letra-nav: #204265;    
+    --letra-aside: #204265;       
+    --letra-nombre: #ffffff;    
+    --letra-footer: #ffffff;    
+    --letra-slogan: #ffffff;   
+    --letra-boton-seccion:#ffffff;         
+    --letra-section: #204265; 
+    --estrellas: #40770c;
+    --a:#40770c;
+    --precio:#40770c;
+    --botones-section: #40770c ;
+    --sombras-general: #40770c;
+    --sombra-precio :  #aaff7f ;   
+    --borde-botones-section:#aaff7f; 
+    --borde-nav: #40770c;
+    --borde-aside: #40770c;   
+    --bordes: #40770c;          
+    --body: #ffffff;      
+    --section: #ffffff;            
+    --header: #204265;          
+    --nav: #ffffff;             
+    --aside: #ffffff;           
+    --footer: #204265;          
+ 
+} 
+
+.modo-nocturno
+{
+    --letra-general: #ffffff;
+    --letra-nav: #ffffff;    
+    --letra-aside: #ffffff;       
+    --letra-nombre: #ffffff;    
+    --letra-footer: #ffffff;    
+    --letra-slogan: #ffffff;    
+    --letra-boton-seccion:#204265;      
+    --letra-section: #ffffff; 
+    --estrellas: #aaff7f;
+    --a:#aaff7f;
+    --precio:#aaff7f;
+    --botones-section: #aaff7f ;
+    --sombras-general: #ffffff;
+    --sombra-precio :  #aaff7f ;   
+    --borde-botones-section:#40770c;   
+    --borde-nav: #ffffff;
+    --borde-aside: #ffffff; 
+    --bordes: #ffffff;          
+    --body: #204265;            
+    --header: #204265;     
+    --section: #204265;          
+    --nav: #204265;             
+    --aside: #204265;           
+    --footer: #204265;  
+}
+
+/*Navegador*/
+
+@media (prefers-color-scheme: dark ) {
+    .modo-diurno{
+        --letra-general: #ffffff;
+        --letra-nav: #ffffff;    
+        --letra-aside: #ffffff;       
+        --letra-nombre: #ffffff;    
+        --letra-footer: #ffffff;    
+        --letra-slogan: #ffffff;    
+        --letra-boton-seccion:#204265;      
+        --letra-section: #ffffff; 
+        --estrellas: #aaff7f;
+        --a:#aaff7f;
+        --precio:#aaff7f;
+        --botones-section: #aaff7f ;
+        --sombras-general: #ffffff;
+        --sombra-precio :  #aaff7f ;   
+        --borde-botones-section:#ffffff;    
+        --bordes: #ffffff;          
+        --body: #204265;            
+        --header: #204265;     
+        --section: #204265;          
+        --nav: #204265;             
+        --aside: #204265;           
+        --footer: #204265; 
+    }
+}
+
+
+/* Enlazar una fuente externa desde Google Fonts (API) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Incluir una fuente auto-hospedada */
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway/Raleway-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+:root {
+    font-size: 12pt;
+    --font-size-base: 1rem; /* Tamaño base del body */
+    --font-size-step: 0.125rem; /* Incrementos de tamaño (2px equivalente en rem) */
+}
+
+/*General*/
+body
+{
+    font-size: var(--font-size-base); /* Tamaño intermedio inicial */
+    line-height: 1.6;
+    font-family: 'Montserrat', 'Raleway', sans-serif; /*Por último añado la de por defecto*/
+    background-color: var(--body); 
+}
+
+
+button
+{
+    cursor: pointer;
+}
+a{
+    color: var(--letra-aside);
+    text-decoration: none;
+}
+
+/*---------------------------------*/
+
+/*Header*/
+
+header 
+{
+    background: linear-gradient(var(--header), var(--footer))  ; 
+    color: white; 
+    padding: 1em; 
+} 
+
+.div-header
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p.nombre
+{
+    text-transform: uppercase;
+    font-size: 2em; /*corrección del ejercicio anterior, cambié el h1 por p*/
+    margin: 0.5em;
+    color: var(--letra-nombre)
+}
+
+input.buscador
+{
+    border-radius: 2em/3em;
+    margin-right: 1em;
+    width: 20em;
+    height: 2em;
+}
+
+p.slogan
+{
+    font-style: italic;
+    color:var(--letra-slogan);
+}
+
+div.enlaces-perfilusuario img
+{
+    border-radius: 14em/12em;
+    margin: 0.5em 0.5em 0.5em 0;
+    height: 1.5em;
+}
+
+div.botones-header button{
+    border-radius: 2em;
+    padding : 0.3em;
+}
+
+/*Imagenes*/
+
+img.logo
+{
+    border: solid 0.1em var(--bordes);
+    box-shadow: 0.1em 0.1em 1em var(--sombra-precio);
+    border-radius: 10em/8em;
+    height: 3em;
+}
+
+
+/*MODO*/
+.cambiar_modo {
+    background-color: white;
+    border-radius: 2em;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px var(--bordes);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+.icono {
+    width: 1.5em;
+    height: auto;
+    object-fit: contain;
+}
+
+/*Letra*/
+
+.cambiar_letra
+{
+    margin-top: 1em;
+}
+
+
+/*-------------------------*/
+
+/*Contenedor nav-aside*/
+/*Nav*/
+
+div.contenido
+{
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 1em; 
+}
+
+nav
+{
+    box-shadow: 0.1em 0.1em 1em var(--sombras-general); 
+    background: var(--nav);
+    border: solid 0.1em var(--borde-nav);
+    text-transform: uppercase;
+    color: var(--letra-nav);
+    font-weight: bold;
+    margin: 1em 0.5em 1em 0;
+}
+
+ul.lista-nav
+{
+    list-style: none;
+    margin:0; 
+    padding: 0;
+}
+
+ul.lista-nav li
+{
+    font-size: 1.1em;
+    margin-left: 1em;
+} 
+
+/* Aside */
+
+aside.barra-lateral {
+    margin: 1em 0.5em 1em 0;
+    padding: 2em; 
+    box-shadow: 0.1em 0.1em 1em var(--sombras-general); 
+    border-radius: 2em; 
+    border: solid 0.1em var(--borde-aside);
+    background: var(--aside) ;
+}
+
+aside.barra-lateral p {
+    font-size: 1.5em; 
+    margin-bottom: 1em; 
+    color:  var(--letra-aside); 
+}
+
+aside.barra-lateral ul {
+    list-style: none;
+}
+
+aside.barra-lateral li {
+    margin-bottom: 0.5em; 
+}
+
+aside.barra-lateral a {
+    text-decoration: none;
+    color: var(--letra-aside); 
+}
+
+aside.barra-lateral a:hover {
+    color: var(--letra-aside); 
+}
+
+aside ul{
+    padding : 0;
+}
+
+/*Footer*/
+footer{
+    background: var(--footer);
+    color: var(--letra-footer) ;   
+    margin: 1em 0;        
+    padding: 1em 0;         
+}
+
+p.titulofooter {
+    font-weight: bold;
+    font-size: 0.9em;
+    text-decoration: underline;
+    margin-bottom: 1em;
+}
+
+div.preguntas {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-left: 1em;
+}
+
+div.preguntas ul {           
+    list-style: none; 
+}
+
+div.preguntas li {
+    margin-bottom: 0.5em;
+}
+
+div.preguntas a {
+    text-decoration: none;
+    font-size: 0.8em;
+    color:var(--asideYLetra);
+}
