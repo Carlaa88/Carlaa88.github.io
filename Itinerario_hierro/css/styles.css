@@ -1,0 +1,102 @@
+/* Fuente principal más redonda y fresca */
+body {
+  font-family: 'Quicksand', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #e0f7fa, #f9fbe7);
+  color: #333;
+}
+
+/* Encabezado con estilo oceánico y toque tropical */
+header {
+  background: linear-gradient(135deg, #00bfa5, #00695c);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-bottom: 4px solid #4db6ac;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Contenido centrado con más aire */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+/* Secciones con sombras más suaves y borde temático */
+section {
+  background-color: #ffffffee;
+  margin: 25px 0;
+  padding: 25px;
+  border-left: 6px solid #00bfa5;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #00695c;
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 1.5em;
+  border-bottom: 2px dashed #b2dfdb;
+  padding-bottom: 5px;
+}
+
+ul {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+/* Enlaces con color playa */
+a {
+  color: #b2ebf2;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #e0f2f1;
+}
+
+span {
+  font-style: italic;
+  color: #4db6ac;
+}
+
+/* Responsive mejorado */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 25px 15px;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+}
